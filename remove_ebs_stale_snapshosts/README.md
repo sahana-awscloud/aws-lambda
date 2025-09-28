@@ -1,3 +1,5 @@
+OPTIMIZATING COST BY REMOVING UNUSED EBS SNAPSHOTS
+
 Prerequisites:
   EC2 instance,
   Lambda function,
