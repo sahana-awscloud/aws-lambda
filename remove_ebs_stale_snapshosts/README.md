@@ -3,7 +3,7 @@ OPTIMIZATING COST BY REMOVING UNUSED EBS SNAPSHOTS
 Prerequisites:
   EC2 instance,
   Lambda function,
-  Cloudwatch
+  EventBridge
 
 Implementation:
   1. Launch an EC2 insatnce. By default volume will be created.
@@ -16,6 +16,7 @@ Implementation:
          DescribeVolume
          DeleteSnapshot 
      and deploy the code ebs_stale_snapshosts.py
-  3. Deploy, Test and check if the snapshot is deleted on EC2 dashboard.
-  4. Terminate the created EC2 instance.
-  5. Test and check if the snapshot is deleted on EC2 dashboard. (SUCCESSFULLY SNAPSHOT NEEDS TO BE DELETED!!!)
+  3. Create a Rule in EventBridge and schedule the trigger to test Lambda function
+  4. Deploy, Test and check if the snapshot is deleted on EC2 dashboard.
+  5. Terminate the created EC2 instance.
+  6. Test and check if the snapshot is deleted on EC2 dashboard. (SUCCESSFULLY SNAPSHOT NEEDS TO BE DELETED!!!)
